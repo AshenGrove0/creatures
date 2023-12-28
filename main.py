@@ -12,7 +12,9 @@ def main():
     environment = Environment(diamensions=diamensions, hospitality=hospitality)
     base_creature = Creature(id=0, name=random.choice(["John", "Jane"]), spawn=(random.randrange(0,diamensions[0]), random.randrange(0,diamensions[0])))
     environment[base_creature.spawn] = base_creature
-    print(environment)
+    for row in environment.board:
+        for board_space in row:
+            print(board_space.value)
 
 if __name__ == "__main__":
     main()
