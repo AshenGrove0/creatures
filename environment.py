@@ -10,8 +10,7 @@ class Environment():
     
     def __setitem__(self, coords, value):
         x,y = coords[0], coords[1]
-        new_board_space = BoardSpace(value)  # Create a new BoardSpace with the desired item
-        self.board[x][y] = new_board_space
+        self.board[x][y] = BoardSpace(value)
         
         
     def __getitem__(self, key):
