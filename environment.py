@@ -6,7 +6,7 @@ class Environment():
     def __init__(self, diamensions: tuple, hospitality: int): #Hospitality = chance of food
         self.diamensions = diamensions
         self.hospitality = hospitality
-        self.board = [BoardSpace((i,j)) for i in range(diamensions[0]) for j in range(diamensions[1])]
+        self.board = [[BoardSpace((i,j)) for i in range(diamensions[0])] for j in range(diamensions[1])]
     
     def __setitem__(self, coords, value):
         x,y = coords[0], coords[1]
